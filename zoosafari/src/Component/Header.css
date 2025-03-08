@@ -1,0 +1,19 @@
+.text-primary {
+    color: #28a745 !important;
+  }
+  
+  .btn-sm-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .btn-sm-square:hover {
+    background-color: #28a745;
+    color: white !important;
+  }
+  ////Header Sce

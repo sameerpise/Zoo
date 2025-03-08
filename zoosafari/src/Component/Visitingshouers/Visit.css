@@ -1,0 +1,116 @@
+/* Container */
+.Hours{
+ 
+    background: white !important;
+}
+.visit-hours-container {
+ 
+    /* background: linear-gradient(135deg, rgba(0, 100, 0, 0.8), rgba(0, 50, 50, 0.9)); */
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 16px;
+    /* box-shadow: 0 10px 30px rgba(248, 246, 246, 0.4); */
+    position: relative;
+    overflow: hidden;
+    max-height: 650px;
+    margin: auto;
+   
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .visit-hours-container:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Title */
+  .visit-title {
+    font-size: 2.2rem;
+    color: #50e475;
+    /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .title-icon {
+    font-size: 2rem;
+    color:#50e475 
+  }
+  
+  /* Visit Card */
+  .visit-card {
+    /* background: url('../../assets/frida-lannerstrom-IDO_a-dxrCY-unsplash.jpg'); */
+    /* backdrop-filter: blur(5px); */
+    padding: 20px;
+
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(104, 102, 102, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Individual Visit Item */
+  .visit-item {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #50e475;
+    padding: 12px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .visit-item:hover {
+    transform: translateX(5px);
+    color: #ffcc00;
+  }
+  
+  .visit-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Icons */
+  .time-icon {
+    color: #ffcc00;
+    margin-left: 8px;
+    font-size: 1.4rem;
+  }
+  
+  /* Note */
+  .visit-note {
+    margin-top: 15px;
+    color: #ffcc00;
+    font-size: 1rem;
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .visit-hours-container {
+      padding: 40px 15px;
+    }
+  
+    .visit-item {
+      font-size: 1.1rem;
+      width: 100%;
+    }
+  
+    .title-icon {
+      font-size: 1.6rem;
+    }
+  
+    .visit-title {
+      font-size: 1.8rem;
+    }
+  }
+  

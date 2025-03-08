@@ -1,0 +1,111 @@
+/* Background */
+.animal-list-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #329132, #2196f3);
+    min-height: 100vh;
+  }
+  
+  /* Title */
+  .page-title {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+   
+   
+  }
+  
+  /* Animal List Grid */
+  .animal-list-container {
+  position: relative;
+  top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* Card */
+  .animal-card {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover Effects */
+  .animal-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Image */
+  .animal-image {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .animal-card:hover .animal-image {
+    opacity: 0.85;
+  }
+  
+  /* Card Content */
+  .animal-content {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .animal-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e7d32;
+  }
+  
+  .animal-category {
+    color: gray;
+    font-size: 14px;
+  }
+  
+  /* Buttons */
+  .animal-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+  
+  .edit-btn {
+    background: #0277bd !important;
+    color: white !important;
+    text-transform: capitalize;
+  }
+  
+  .delete-btn {
+    background: #d32f2f !important;
+    color: white !important;
+    text-transform: capitalize;
+  }
+  
+  .edit-btn:hover {
+    background: #01579b !important;
+  }
+  
+  .delete-btn:hover {
+    background: #b71c1c !important;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .animal-list-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  

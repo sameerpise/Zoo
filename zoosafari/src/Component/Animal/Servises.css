@@ -1,0 +1,93 @@
+/* General Services Container */
+.services-container {
+    background: linear-gradient(135deg, #dad9d8, #2a8f2a);
+    padding: 60px 0;
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  /* Section Titles */
+  .section-tagline {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .highlight {
+    color: #c2e937;
+  }
+  
+  /* Service Cards */
+  .service-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .service-icon {
+    width: 60px;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1); /* Makes it white */
+  }
+  
+  
+  .service-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .service-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+  }
+  
+  /* Contact Box */
+  .contact-box {
+    margin-top: 50px;
+    background: #2c3e50;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+  }
+  
+  .contact-icon {
+    font-size: 40px;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .service-card {
+      padding: 15px;
+    }
+  
+    .contact-box {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  

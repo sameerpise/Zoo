@@ -1,0 +1,71 @@
+/* Background */
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #004d40, #00796b);
+  }
+  
+  /* Register Container */
+  .register-container {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background: #ffffff;
+  }
+  
+  /* Left Section - Image */
+  .register-image {
+    flex: 1;
+    background: url("../assets/img/animal-lg-1.jpg") center/cover no-repeat;
+  }
+  
+  /* Right Section - Form */
+  .register-form {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .register-form h2 {
+    text-align: center;
+    color: #004d40;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  .form-floating input {
+    border-radius: 8px;
+  }
+  
+  .register-btn {
+    background: #00796b;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .register-btn:hover {
+    background: #004d40;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .register-container {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+    }
+  
+    .register-image {
+      height: 200px;
+    }
+  }
+  

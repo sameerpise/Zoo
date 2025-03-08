@@ -1,0 +1,72 @@
+/* Background */
+.add-animal-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4caf50, #2e7d32);
+}
+
+/* Add Animal Container */
+.add-animal-container {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Left Section - Image */
+.add-animal-image {
+  flex: 1;
+  background: url("../../assets/img/bg-1.jpg") center/cover no-repeat;
+}
+
+/* Right Section - Form */
+.add-animal-form {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-animal-form h2 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* File Input */
+.file-input {
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Button */
+.add-animal-btn {
+  background: #2e7d32;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.add-animal-btn:hover {
+  background: #1b5e20;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add-animal-container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .add-animal-image {
+    height: 200px;
+  }
+}

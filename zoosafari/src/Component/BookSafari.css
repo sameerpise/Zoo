@@ -1,0 +1,124 @@
+/* 🎨 Background */
+.book-safari-container {
+  position: relative;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4caf50, #2196f3);
+}
+
+/* 📖 Booking Card */
+.booking-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  max-height: 600px;
+ 
+}
+
+/* 📜 BIG Ticket Card */
+.big-ticket-card {
+  background: #fff;
+  max-width: 90%;  /* Adjusts width dynamically */
+  width: 500px;
+  padding: 30px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: pop 0.6s ease-out;
+  border-left: 8px solid #ff9800;
+  border-right: 8px solid #ff9800;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 📱 Small Screens (Phones) */
+@media (max-width: 768px) {
+  .big-ticket-card {
+    max-width: 75%;
+    padding: 20px;
+    border-left: 5px solid #ff9800;
+    border-right: 5px solid #ff9800;
+  }
+}
+
+/* 💻 Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .big-ticket-card {
+    max-width: 80%;
+  }
+}
+
+/* 🖥️ Large Screens */
+@media (min-width: 1200px) {
+  .big-ticket-card {
+    width: 500px;
+  }
+}
+
+
+/* 🎟️ Ticket Header */
+.ticket-header {
+  background: #ff9800;
+  color: white;
+  padding: 15px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* 📄 Ticket Body */
+.ticket-body {
+  padding: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.ticket-id {
+  font-size: 22px;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.barcode {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+/* 📌 Ticket Footer */
+.ticket-footer {
+  padding: 10px;
+}
+
+/* ✨ Ticket Animation */
+@keyframes pop {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 🎫 Book Now Button */
+.book-now-btn {
+  background: #ff9800;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.book-now-btn:hover {
+  background: #e68900;
+}

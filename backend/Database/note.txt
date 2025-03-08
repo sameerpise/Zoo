@@ -1,0 +1,3 @@
+6hcBfvGURM8BjL0p
+
+mongodb+srv://samypise5:6hcBfvGURM8BjL0p@cluster0.xmvn7.mongodb.net/SafariPark?retryWrites=true&w=majority&appName=Cluster0
