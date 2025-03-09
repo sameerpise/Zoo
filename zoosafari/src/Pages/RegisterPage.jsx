@@ -18,7 +18,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(registerUser(formData)).then((res) => {
-      if (res.meta.requestStatus === "fulfilled") navigate("/add-animal");
+      if (res.meta.requestStatus === "fulfilled") navigate("/book");
     });
   };
 
