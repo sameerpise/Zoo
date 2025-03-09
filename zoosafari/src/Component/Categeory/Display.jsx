@@ -14,7 +14,7 @@ const AnimalList = () => {
 
   const fetchAnimals = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/animals/all");
+      const res = await axios.get("https://zoo-2.onrender.com/api/animals/all");
       setAnimals(res.data);
     } catch (error) {
       console.error("Error fetching animals:", error.response ? error.response.data : error.message);
@@ -25,7 +25,7 @@ const AnimalList = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this animal?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/animals/delete/${id}`);
+        await axios.delete(`https://zoo-2.onrender.com/api/animals/delete/${id}`);
         setAnimals(animals.filter((animal) => animal._id !== id)); // Update state after delete
       } catch (error) {
         console.error("Error deleting animal:", error);
