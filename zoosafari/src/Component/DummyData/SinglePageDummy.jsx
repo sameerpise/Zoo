@@ -12,7 +12,7 @@ import DummyPost from './DummyPost';
 // import Comments from '../Comments/Comments';
 export default function SinglePage() {
 
-    const { id } = useParams();
+   const { id } = useParams();
     const postData =Dummydata.find((p)=> p.id === parseInt(id));
 	
     if (!postData) {
