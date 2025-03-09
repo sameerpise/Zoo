@@ -22,7 +22,7 @@ export default function SinglePage() {
   return (
     <>
     
-    <div className="site-content">
+      <div className="site-content">
       
 	<div className="container">
 		{/* <!-- Content */}
