@@ -34,7 +34,7 @@ const AddAnimal = () => {
     formData.append("Description", animalData.Description);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/animals/add", formData, {
+      const res = await axios.post("https://zoo-2.onrender.com/api/animals/add", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       toast.success(res.data.message);
