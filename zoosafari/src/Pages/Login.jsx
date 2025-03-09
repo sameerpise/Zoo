@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(loginUser(formData)).then((res) => {
-      if (res.meta.requestStatus === "fulfilled") navigate("/add-animal");
+      if (res.meta.requestStatus === "fulfilled") navigate("/book");
     });
   };
 
