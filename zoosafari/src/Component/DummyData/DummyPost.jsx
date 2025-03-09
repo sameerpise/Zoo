@@ -24,7 +24,7 @@ export default function DummyPost() {
                 <div className="col-md-7">
                   <div className="card-body">
                     <h4 className="post-title">
-                      <a href=""  onClick={() => navigate(`/animalSecond/${postData.id}`)}}>{postData.title}</a>
+                      <a href=""  onClick={() => navigate(`/animalSecond/${postData.id}`)}>{postData.title}</a>
                       <span className="underline"></span>
                     </h4>
                     <p className="post-text"  onClick={() => navigate(`/animalSecond/${postData.id}`)}>{postData.content.slice(0, 100)}...</p>
