@@ -17,14 +17,14 @@ export default function DummyPost() {
             <div className="card post-card">
               <div className="row">
                 <div className="col-md-5 wrapthumbnail">
-                  <a href=""  style={{ cursor: "pointer" }}>
+                  <a href="#"  style={{ cursor: "pointer" }}>
                     <img className="thumbnail post-image" src={postData.img} alt="Post Thumbnail" />
                   </a>
                 </div>
                 <div className="col-md-7">
                   <div className="card-body"> 
                     <h4 className="post-title">
-                      <a href="" >{postData.title}</a>
+                      <a href="#" >{postData.title}</a>
                       <span className="underline"></span>
                     </h4>
                     <p className="post-text"  onClick={() => navigate(`/animalSecond/${postData.id}`)}>{postData.content.slice(0, 100)}...</p>
