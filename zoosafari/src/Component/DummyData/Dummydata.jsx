@@ -1,3 +1,4 @@
+
 import img1 from '../../assets/img/bg-1.jpg'
 import img2 from '../../assets/img/animal-md-1.jpg'
 import img3 from '../../assets/img/bg-2.jpg'
