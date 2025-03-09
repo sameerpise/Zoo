@@ -16,7 +16,7 @@ const EditAnimal = () => {
 
   const fetchAnimal = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/animals/${id}`);
+      const res = await axios.get(`https://zoo-2.onrender.com/api/animals/${id}`);
       setAnimalData({ name: res.data.name, category: res.data.category, image:res.data.image,Description:res.data.Description });
       setPreview(res.data.image);
     } catch (error) {
@@ -45,7 +45,7 @@ const EditAnimal = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/animals/update/${id}`, formData, {
+      await axios.put(`https://zoo-2.onrender.com/api/animals/update/${id}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       navigate("/animals");
