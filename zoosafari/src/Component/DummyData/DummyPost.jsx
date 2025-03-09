@@ -22,7 +22,7 @@ export default function DummyPost() {
                   </a>
                 </div>
                 <div className="col-md-7">
-                  <div className="card-body">
+                  <div className="card-body"> 
                     <h4 className="post-title">
                       <a href=""  onClick={() => navigate(`/animalSecond/${postData.id}`)}>{postData.title}</a>
                       <span className="underline"></span>
