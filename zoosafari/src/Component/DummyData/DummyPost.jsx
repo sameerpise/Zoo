@@ -17,21 +17,21 @@ export default function DummyPost() {
             <div className="card post-card">
               <div className="row">
                 <div className="col-md-5 wrapthumbnail">
-                  <a href=""  style={{ cursor: "pointer" }}  onClick={() => navigate(`/animalSecond/${postData.id}`)}>
+                  <a href=""  style={{ cursor: "pointer" }} onClick={() => navigate(`/animalSecond/${postData.id}`)}>
                     <img className="thumbnail post-image" src={postData.img} alt="Post Thumbnail" />
                   </a>
                 </div>
                 <div className="col-md-7">
                   <div className="card-body">
                     <h4 className="post-title">
-                      <a href=""   onClick={() => navigate(`/animalSecond/${postData.id}`)}>{postData.title}</a>
+                      <a href=""  onClick={() => navigate(`/animalSecond/${postData.id}`)}}>{postData.title}</a>
                       <span className="underline"></span>
                     </h4>
-                    <p className="post-text"   onClick={() => navigate(`/animalSecond/${postData.id}`)}>{postData.content.slice(0, 100)}...</p>
+                    <p className="post-text"  onClick={() => navigate(`/animalSecond/${postData.id}`)}>{postData.content.slice(0, 100)}...</p>
                     <div className="post-meta">
                       <span className="author">
                         <img className="author-thumb" src={postData.img} alt="Author" />
-                        <a href="/author"   onClick={() => navigate(`/animalSecond/${postData.id}`)}>{postData.author}</a>
+                        <a href="/author"  onClick={() => navigate(`/animalSecond/${postData.id}`)}>{postData.author}</a>
                       </span>
                       <span className="post-date">{postData.Date}</span>
                     </div>
