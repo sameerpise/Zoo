@@ -143,11 +143,7 @@ export default function SinglePage() {
 					<!-- Post Content --> */}
 					<div className="article-post">
 						<p>
-							{
-                                postData.content.split('\n').map((line, index) => (
-                                    <p key={index}>{line}</p>
-                                ))
-                            }
+							{ postData.content }
 						</p>
 						<p>
 							As for this particular rendition of Charles Perrault’s classNameic tale, the text and design is by Lydia Very (1823-1901), sister of Transcendentalist poet Jones Very. The gruesome ending of the original — which sees Little Red Riding Hood being gobbled up as well as her grandmother — is avoided here, the gore giving way to the less bloody aims of the morality tale, and the lesson that one should not disobey one’s mother.
@@ -169,7 +165,7 @@ export default function SinglePage() {
 					{/* <!-- Post Date --> */}
 					<p>
 						<small>
-						<span className="post-date"><time className="post-date" >{postData.Date}</time></span>
+{/* 						<span className="post-date"><time className="post-date" >{postData.Date}</time></span> */}
 						</small>
 					</p>
 					{/* <!-- Prev/Next --> */}
