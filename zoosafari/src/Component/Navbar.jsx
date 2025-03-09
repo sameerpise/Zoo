@@ -135,7 +135,7 @@ export default function Navbar() {
           </div>
 
           {/* Buy Ticket Button */}
-          <Link to="/book" className="btn btn-success" onClick={toggleNavbar}>
+          <Link to="/login" className="btn btn-success" onClick={toggleNavbar}>
             Buy Ticket <i className="fa fa-arrow-right ms-3"></i>
           </Link>
         </div>
