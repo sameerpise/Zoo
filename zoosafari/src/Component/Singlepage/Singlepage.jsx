@@ -15,7 +15,7 @@ const SingleAnimal = () => {
 
   const fetchAnimal = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/animals/${id}`);
+      const res = await axios.get(`https://zoo-2.onrender.com/api/animals/${id}`);
       setAnimal(res.data);
     } catch (error) {
       console.error("Error fetching animal:", error);
