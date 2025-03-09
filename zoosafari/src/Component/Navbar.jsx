@@ -39,7 +39,7 @@ export default function Navbar() {
         <Link to="/" className="navbar-brand p-0">
           <img className="img-fluid me-3" src={Logo} alt="Icon" />
           <h1 className="m-0 text-primary">
-            Zoo<span className="logoStyle">Sa</span>fari
+            
           </h1>
         </Link>
 
