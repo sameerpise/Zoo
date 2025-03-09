@@ -3,7 +3,7 @@ import img1 from '../../assets/img/bg-1.jpg'
 import img2 from '../../assets/img/animal-md-1.jpg'
 import img3 from '../../assets/img/bg-2.jpg'
 import img4 from '../../assets/img/animal-md-2.jpg'
- export const Dummydata =[
+export const Dummydata =[
     {
          id:1,
         "title":"The Healing Power of Nature: Why We Need to Reconnect",
