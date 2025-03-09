@@ -1,4 +1,4 @@
-import "jquery";
+ondimport "jquery";
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from 'react';
@@ -66,7 +66,7 @@ function App() {
         <Route path='/register' element={<Register />} />
         {/* <Route path='/' element={<CategoryList />} /> */}
         <Route path="/animal/:id" element={<SingleAnimalPage />} />
-        <Route path="/animalS/:id" element={<SinglePage />} />
+        <Route path="/animalSecond/:id" element={<SinglePage />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/book' element={ < BookSafari />    } />
         <Route path='/dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>    } />
