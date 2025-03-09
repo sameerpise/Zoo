@@ -14,7 +14,7 @@ export default function Allpost() {
   
     const fetchAnimals = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/animals/all");
+        const res = await axios.get("https://zoo-2.onrender.com/api/animals/all");
         setAnimals(res.data);
       } catch (error) {
         console.error("Error fetching animals:", error.response ? error.response.data : error.message);
