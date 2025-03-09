@@ -42,14 +42,14 @@ const AnimalList = () => {
       <Box className="animal-list-container">
         {animals.map((animal) => (
           <Card key={animal.id} className="animal-card">
-            <CardMedia component="img" className="animal-image" onClick={() => navigate(`/animal/${animal.id}`)} image={animal.image} alt={animal.name} />
+            <CardMedia component="img" className="animal-image" onClick={() => navigate(`/animal/${animal._id}`)} image={animal.image} alt={animal.name} />
             <CardContent className="animal-content">
               <Typography variant="h6" className="animal-name">{animal.name}</Typography>
               <Typography variant="h6" className="animal-name">{animal.Description}</Typography>
               <Typography variant="body2" className="animal-category">Category: {animal.category}</Typography>
             </CardContent>
             <CardActions className="animal-actions">
-              <Button variant="contained" className="edit-btn" onClick={() => navigate(`/edit-animal/${animal.id}`)}>
+              <Button variant="contained" className="edit-btn" onClick={() => navigate(`/edit-animal/${animal._id}`)}>
                 <i className="bi bi-pencil-square"></i> Edit
               </Button>
               <Button variant="contained" className="delete-btn" onClick={() => handleDelete(animal._id)}>
