@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // API Base URL
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "https://zoo-2.onrender.com/api/auth";
 
 // Register User
 export const registerUser = createAsyncThunk("auth/register", async (userData, thunkAPI) => {
