@@ -12,8 +12,8 @@ import DummyPost from './DummyPost';
 // import Comments from '../Comments/Comments';
 export default function SinglePage() {
 
-    const { id } = useParams()
-    const postData =Dummydata.find((p)=> p.id === parseInt(id))
+    const { id } = useParams();
+    const postData =Dummydata.find((p)=> p.id === Number(id));
 	
     if (!postData) {
         return <h2 style={{ textAlign: "center" }}>Post not found!</h2>;
