@@ -162,13 +162,14 @@ export default function SinglePage() {
 						<div className="clearfix">
 						</div>
 					</div>
-					{/* <!-- Post Date --> */}
+					
 					<p>
 						<small>
-{/* 						<span className="post-date"><time className="post-date" >{postData.Date}</time></span> */}
+ 						<span className="post-date"><time className="post-date" >{postData.Date}</time></span> 
+							<span className="post-date"><time className="post-date" >{postData.author}</time></span>
 						</small>
 					</p>
-					{/* <!-- Prev/Next --> */}
+					
 					{/* <div className="row PageNavigation mt-4 prevnextlinks">
 						<div className="col-md-6 rightborder pl-0">
 							<a className="thepostlink">« Red Riding Hood</a>
