@@ -13,7 +13,7 @@ import DummyPost from './DummyPost';
 export default function SinglePage() {
 
     const { id } = useParams();
-    const postData =Dummydata.find((p)=> p.id === Number(id));
+    const postData =Dummydata.find((p)=> p.id === parseInt(id));
 	
     if (!postData) {
         return <h2 style={{ textAlign: "center" }}>Post not found!</h2>;
