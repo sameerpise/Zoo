@@ -48,7 +48,7 @@ const BookSafari = () => {
     try {
       const token = JSON.parse(localStorage.getItem("user"))?.token;
       const response = await axios.post(
-        "http://localhost:5000/api/bookings",
+        "https://zoo-2.onrender.com/api/bookings",
         bookingData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -61,7 +61,7 @@ const BookSafari = () => {
       localStorage.setItem("ticket", JSON.stringify(bookingDetails));
       setTicket(bookingDetails);
     } catch (error) {
-      alert("⚠️ Booking Failed! Please try again.");
+      alert("⚠️ Booking Failed! LogIn Or Please try again Later.");
     }
   };
 
