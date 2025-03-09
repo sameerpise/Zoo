@@ -12,9 +12,11 @@ import Duplicatelist from './Categeory/Duplicatelist';
 import New from './Animal/New';
 import Services from './Animal/Services';
 import ZooEvents from './ZooEvents';
+import DummyPost from './DummyData/DummyPost';
 
 
-export default function Landingpage() {
+
+export default function LandingPage() {
   ;
   return (
     <>
@@ -55,12 +57,17 @@ export default function Landingpage() {
         </div>
       </div>
     </div>
+    
  <Stats />
+ <h2 className='text-center tex '><span className='text-success' > Popular Blogs </span></h2>
+ <DummyPost />
  <New />
  <ZooEvents />
  <Services />
  <VisitHours />
- <Duplicatelist />
+
+
+ {/* <Duplicatelist /> */}
     </>
   )
 }

@@ -1,11 +1,8 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import OwlCarousel from "react-owl-carousel3";
+
 import imag1 from'../assets/img/carousel-1.jpg'
-import imag2 from'../assets/img/carousel-2.jpg'
-import imag3 from '../assets/img/carousel-3.jpg'
+
 import './HeaderSection.css'
 const HeaderCarousel = () => {
   const [videoSrc, setVideoSrc] = useState("");
@@ -20,12 +17,6 @@ const HeaderCarousel = () => {
   const images=[
     {
     img:imag1
-  },
-    {
-    img:imag2
-  },
-    {
-    img:imag3
   }
 ]
 
@@ -57,13 +48,13 @@ const HeaderCarousel = () => {
         <div className="col-lg-6">
          
            
-          <OwlCarousel className="owl-theme" loop margin={10} nav={false} items={1} autoplay>
+         
   {images.map((imge, index) => (
     <div key={index} className="item">
       <img className="img-fluid" src={imge.img} alt="" />
     </div>
   ))}
-</OwlCarousel>
+
 
             
    

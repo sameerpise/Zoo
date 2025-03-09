@@ -70,7 +70,7 @@ export default function Navbar() {
               About
             </Link>
             <Link
-              to="/animals"
+              to="/AllPost"
               className="nav-item nav-link"
               onClick={toggleNavbar}
             >

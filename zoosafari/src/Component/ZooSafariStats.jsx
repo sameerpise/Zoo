@@ -20,7 +20,7 @@ const Stats = () => {
             <div key={index} className="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay={stat.delay}>
               <i className={`fa ${stat.icon} fa-3x text-warning mb-3`}></i>
               <h1 className="text-white mb-2">
-                <CountUp start={0} end={stat.value} duration={3} separator="," />
+                <CountUp start={0} end={stat.value} duration={5} separator="," />
               </h1>
               <p className="text-white mb-0">{stat.label}</p>
             </div>

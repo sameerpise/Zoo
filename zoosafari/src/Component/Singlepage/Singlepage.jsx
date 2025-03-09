@@ -23,23 +23,29 @@ const SingleAnimal = () => {
   };
 
   return (
-    <Box className="single-animal-page">
-      {animal ? (
-        <Card className="animal-details-card">
-          <CardMedia component="img" className="animal-details-image" image={animal.image} alt={animal.name} />
-          <CardContent className="animal-details-content">
-            <Typography variant="h4" className="animal-details-name">{animal.name}</Typography>
-            <Typography variant="h6" className="animal-details-category">Category: {animal.category}</Typography>
-            <Typography variant="body1" className="animal-details-description">{animal.description || "No description available."}</Typography>
-            <Button variant="contained" className="back-btn" onClick={() => navigate("/animals")}>
-              ⬅ Back to Animals
-            </Button>
-          </CardContent>
-        </Card>
-      ) : (
-        <Typography className="loading-text">Loading...</Typography>
-      )}
-    </Box>
+    <React.Fragment>
+      
+      <Box className="single-animal-page">
+  {animal ? (
+    <>
+      <img src={animal.image} alt={animal.name} className="animal-details-image" />
+      <div className="animal-details-content">
+        <Typography variant="h3" className="animal-details-name">{animal.name}</Typography>
+        <Typography variant="h5" className="animal-details-category">Category: {animal.category}</Typography>
+        <Typography variant="body1" className="animal-details-description">
+          {animal.Description || "No description available."}
+        </Typography>
+        <Button className="back-btn" onClick={() => navigate("/animals")}>
+          ⬅ Back to Animals
+        </Button>
+      </div>
+    </>
+  ) : (
+    <Typography className="loading-text">Loading...</Typography>
+  )}
+</Box>
+
+    </React.Fragment>
   );
 };
 

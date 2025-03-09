@@ -11,7 +11,7 @@ import Register from './Pages/RegisterPage';
 import PrivateRoute from './Pravate/Private';
 import Dashboard from './Component/Dashboard';
 import BookSafari from './Component/BookSafari';
-import Landingpage from './Component/Landingpage';
+import LandingPage from './Component/LandingPage';
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import AddAnimal from "./Component/Categeory/Cat";
@@ -23,6 +23,9 @@ import Footer from "./Component/Footer/Footer";
 import SingleAnimalPage from "./Component/Singlepage/Singlepage";
 import New from "./Component/Animal/New";
 import NotFoundPage from "./Component/PageNotFound/PageNotFound";
+import Allpost from "./Component/DailyBlog/Allpost";
+import SinglePage from "./Component/DummyData/SinglePageDummy";
+import DummyPost from "./Component/DummyData/DummyPost";
 
 
 function App() {
@@ -50,9 +53,10 @@ function App() {
       <Routes>
         <Route path='/login' element={<Login />} />
         <Route path='/*' element={<NotFoundPage />} />
-         <Route path='/' element={<Landingpage />} />
+         <Route path='/' element={<LandingPage/>} />
          <Route path='/about' element={<About />} />
          <Route path='/about' element={<About />} />
+         <Route path='/AllPost' element={<DummyPost />} />
          <Route path='/add-animal' element={<AddAnimal />} />
          <Route path='/animals' element={ <AnimalList /> } />
          <Route path="/edit-animal/:id" element={<EditAnimal />} />
@@ -62,6 +66,7 @@ function App() {
         <Route path='/register' element={<Register />} />
         {/* <Route path='/' element={<CategoryList />} /> */}
         <Route path="/animal/:id" element={<SingleAnimalPage />} />
+        <Route path="/animalS/:id" element={<SinglePage />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/book' element={ < BookSafari />    } />
         <Route path='/dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>    } />
