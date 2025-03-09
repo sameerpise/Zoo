@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 export default function DummyPost() {
     const navigate = useNavigate();
   return (
-    <><div className="container post-container" style={{position:"relative",marginTop:"50px"}}>
+    <>
+<div className="container post-container" style={{position:"relative",marginTop:"50px"}}>
     <section className="featured-posts">
       <div className="section-title">
         <h2><span className='text-center '> Popular Blogs </span></h2>
@@ -48,6 +49,9 @@ export default function DummyPost() {
         ))}
       </div>
     </section>
-  </div></>
+  </div>
+    
+    
+    </>
   )
 }
