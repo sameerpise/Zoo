@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/img/icon/icon-10.png";
+
 import Header from "./Header";
 import Logo from "../assets/jsi-logo.png";
 export default function Navbar() {
