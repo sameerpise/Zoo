@@ -16,7 +16,7 @@ export default function Services() {
               <span className="text-primary">#</span> Our Services
             </p>
             <h1 className="section-title">
-              Special Services For <span className="highlight">ZooSafari</span> Visitors
+              Special Services For ZooSafari Visitors
             </h1>
           </div>
         </div>
