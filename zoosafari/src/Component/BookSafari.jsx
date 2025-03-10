@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./BookSafari.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const BookSafari = () => {
   const [bookingData, setBookingData] = useState({
@@ -48,7 +50,7 @@ const BookSafari = () => {
     try {
       const token = JSON.parse(localStorage.getItem("user"))?.token;
       const response = await axios.post(
-        "https://zoo-2.onrender.com/api/bookings",
+        "http://localhost:5000/api/bookings",
         bookingData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -60,13 +62,19 @@ const BookSafari = () => {
 
       localStorage.setItem("ticket", JSON.stringify(bookingDetails));
       setTicket(bookingDetails);
+
+      // Show success toast
+      toast.success("🎉 Safari booked successfully!");
     } catch (error) {
-      alert("⚠️ Booking Failed! LogIn Or Please try again Later.");
+      // Show error toast
+      toast.error("⚠️ Booking failed! Please login or try again.");
     }
   };
 
   return (
     <div className="book-safari-container">
+      <ToastContainer position="top-right" autoClose={3000} />
+
       {!ticket ? (
         <div className="booking-card animate__animated animate__fadeInUp">
           <h2>🎟️ Book Your Safari</h2>
@@ -171,9 +179,9 @@ const BookSafari = () => {
           </div>
 
           {/* Display Ticket Price */}
-          {/* <div className="alert alert-info">
+          <div className="alert alert-info">
             <strong>Total Price:</strong> Rs. {bookingData.ticketPrice}
-          </div> */}
+          </div>
 
           <button className="btn book-now-btn w-100 py-2" onClick={handleBooking}>
             <i className="bi bi-calendar-check"></i> Book Now
@@ -200,7 +208,10 @@ const BookSafari = () => {
             <button className="btn btn-success w-100" onClick={() => window.print()}>
               🖨️ Print Ticket
             </button>
-            <button className="btn btn-danger w-100 mt-2" onClick={() => setTicket(null)}>
+            <button className="btn btn-danger w-100 mt-2" onClick={() => {
+              setTicket(null);
+              toast.info("🔄 Ready to book another safari!");
+            }}>
               🔄 Book Another Safari
             </button>
           </div>
