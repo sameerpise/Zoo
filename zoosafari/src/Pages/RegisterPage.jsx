@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../Redux/Slices/AuthSlice";
 import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Register.css"; // Import new CSS
+import "./Register.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const [formData, setFormData] = useState({ name: "", email: "", password: "" });
@@ -18,12 +20,18 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(registerUser(formData)).then((res) => {
-      if (res.meta.requestStatus === "fulfilled") navigate("/book");
+      if (res.meta.requestStatus === "fulfilled") {
+        toast.success("🎉 Registration successful! Welcome to ZooSafari.");
+       setTimeout(()=>navigate('/book'), 2000);
+      } else {
+        toast.error("⚠️ Registration failed! Please try again.");
+      }
     });
   };
 
   return (
     <div className="register-page">
+      <ToastContainer position="top-right" autoClose={3000} />
       <div className="register-container animate__animated animate__fadeInUp">
         {/* Left Section with Image */}
         <div className="register-image"></div>
