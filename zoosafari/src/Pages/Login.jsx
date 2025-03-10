@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../Redux/Slices/AuthSlice";
 import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Login.css"; 
+import "./Login.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -18,12 +20,18 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(loginUser(formData)).then((res) => {
-      if (res.meta.requestStatus === "fulfilled") navigate("/book");
+      if (res.meta.requestStatus === "fulfilled") {
+        toast.success("🎉 Login successful!", { position: "top-right" });
+        setTimeout(() => navigate("/book"), 2000); // Delay navigation for better UX
+      } else {
+        toast.error("⚠️ Login failed! Please check your credentials.", { position: "top-right" });
+      }
     });
   };
 
   return (
     <div className="login-page">
+      <ToastContainer position="top-right" autoClose={3000} />
       <div className="login-container animate__animated animate__fadeInUp">
         {/* Left Section with Image */}
         <div className="login-image"></div>
@@ -31,7 +39,6 @@ const Login = () => {
         {/* Right Section with Login Form */}
         <div className="login-form">
           <h2><i className="bi bi-box-arrow-in-right"></i> ZooSafari Login</h2>
-          {error && <p className="text-danger">{error.message}</p>}
 
           <form onSubmit={handleSubmit}>
             <div className="form-floating mb-3">
