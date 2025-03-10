@@ -1,6 +1,6 @@
 import React from "react";
 import "./ZooEvent.css"; // Import CSS file
-
+import img1 from '../assets/img/animal-lg-2.jpg'
 const ZooEvents = () => {
   const events = [
     {
@@ -9,7 +9,7 @@ const ZooEvents = () => {
       month: "03",
       title: "🌎 Earth Day",
       time: "9:30 AM",
-      link: "https://bonko.ancorathemes.com/event/earth-day/",
+    
     },
     {
       date: "05/10",
@@ -17,7 +17,7 @@ const ZooEvents = () => {
       month: "10",
       title: "🎉 Party for the Planet",
       time: "10:00 AM",
-      link: "https://bonko.ancorathemes.com/event/party-for-the-planet/",
+     
     },
     {
       date: "13/08",
@@ -25,7 +25,7 @@ const ZooEvents = () => {
       month: "08",
       title: "🌙 Night at the Zoo",
       time: "8:30 PM",
-      link: "https://bonko.ancorathemes.com/event/night-at-the-zoo/",
+   
     },
   ];
 
@@ -35,7 +35,7 @@ const ZooEvents = () => {
         {/* Event Image */}
         <div className="col-lg-5 text-center">
           <img
-            src="https://bonko.ancorathemes.com/wp-content/uploads/2018/04/image-30-copyright.jpg"
+            src={img1}
             alt="Zoo Event"
             className="img-fluid rounded event-image"
           />
@@ -48,7 +48,7 @@ const ZooEvents = () => {
             {events.map((event, index) => (
               <a
                 key={index}
-                href={event.link}
+               
                 className="event-item d-flex justify-content-between align-items-center border rounded p-3 mb-3 text-decoration-none"
               >
                 <div className="event-date text-white text-center">
