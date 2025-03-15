@@ -42,8 +42,8 @@ pre {
 .nav-up {box-shadow:none;}
 
 .site-content {
-    padding-top: 3.5rem;
-    margin-top: 57px;
+/*     padding-top: 3.5rem; */
+    margin-top: 27px;
     transition: all 0.4s;
 }
 section {
