@@ -126,10 +126,10 @@ export default function SinglePage() {
 						<div className="after-post-tags">
 							<ul className="tags">
 								<li>
-								<a href="#">bootstrap</a>
+								<a href="#">New</a>
 								</li>
 								<li>
-								<a href="#">tutorial</a>
+								<a href="#">Blogs</a>
 								</li>
 							</ul>
 						</div>
